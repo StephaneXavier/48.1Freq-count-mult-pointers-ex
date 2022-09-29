@@ -1,3 +1,5 @@
+const separatePositive = require('./separate-positive')
+
 describe("separatePositive", function() {
   it("does nothing to arrays of all positive numbers", function() {
     var arr = [1, 2, 3];
@@ -12,7 +14,7 @@ describe("separatePositive", function() {
   it("moves positives to the left and negatives to the right", function() {
     var arr = [2, -1, -3, 6, -8, 10];
     separatePositive(arr);
-
+    
     expect(arr[0] > 0).toBe(true);
     expect(arr[1] > 0).toBe(true);
     expect(arr[2] > 0).toBe(true);
